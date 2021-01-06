@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">JJ红包</string>
+    <string name="pref_open">抢红包</string>
+    <string name="pref_amount">金额提示</string>
+    <string name="pref_self">自己发的不抢</string>
+    <string name="pref_delay">延时抢红包</string>
+    <string name="pref_delay_time">延时时长</string>
+    <string name="delay_message">延迟0毫秒拆开红包</string>
+    <string name="setting">设置</string>
+    <string name="about">关于</string>
+    <string name="desc">自动抢QQ红包</string>
+    <string name="password">口令红包</string>
+    <string name="reply">自动回复</string>
+    <string name="got_reply">抢到自动回复语</string>
+    <string name="got_reply_hit">请输入抢到自动回复语</string>
+    <string name="missed_reply">没抢到自动回复语</string>
+    <string name="missed_reply_hit">请输入没抢到自动回复语</string>
+    <string name="keywords_hit">请输入关键词,多个关键词以,分隔</string>
+    <string name="keywords">关键词不抢</string>
+    <string name="group">指定群/人不抢</string>
+    <string name="group_hit">请输入群/人账号,多个以,分隔</string>
+    <string-array name="password">
+        <item>关</item>
+        <item>发送口令</item>
+        <item>不发送口令</item>
+    </string-array>
+    <string-array name="password_entries">
+        <item>CLOSE</item>
+        <item>SEND</item>
+        <item>DONOT_SEND</item>
+    </string-array>
+    <string-array name="reply">
+        <item>关</item>
+        <item>抢到自动回复</item>
+        <item>没抢到自动回复</item>
+        <item>抢到+没抢到自动回复</item>
+    </string-array>
+    <string-array name="reply_entries">
+        <item>CLOSE</item>
+        <item>GOT</item>
+        <item>MISSED</item>
+        <item>ALL</item>
+    </string-array>
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="基本设置">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="open"
+            android:title="@string/pref_open" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:dependency="open"
+            android:key="amount"
+            android:title="@string/pref_amount" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="open"
+            android:key="self"
+            android:title="@string/pref_self" />
+
+        <ListPreference
+            android:defaultValue="SEND"
+            android:dependency="open"
+            android:entries="@array/password"
+            android:entryValues="@array/password_entries"
+            android:key="password"
+            android:title="@string/password" />
+
+        <ListPreference
+            android:defaultValue="CLOSE"
+            android:dependency="open"
+            android:entries="@array/reply"
+            android:entryValues="@array/reply_entries"
+            android:key="reply"
+            android:title="@string/reply" />
+
+        <EditTextPreference
+            android:dependency="open"
+            android:hint="@string/got_reply_hit"
+            android:key="got_reply"
+            android:title="@string/got_reply" />
+
+        <EditTextPreference
+            android:dependency="open"
+            android:hint="@string/missed_reply_hit"
+            android:key="missed_reply"
+            android:title="@string/missed_reply" />
+
+        <EditTextPreference
+            android:dependency="open"
+            android:hint="@string/group_hit"
+            android:key="group"
+            android:title="@string/group" />
+
+        <EditTextPreference
+            android:dependency="open"
+            android:hint="@string/keywords_hit"
+            android:key="keywords"
+            android:title="@string/keywords" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="open"
+            android:key="delay"
+            android:title="@string/pref_delay" />
+
+        <com.example.jjhb.SeekBarPreference
+            pref_kind="delay_time"
+            android:defaultValue="true"
+            android:dependency="delay"
+            android:layout="@layout/preference_checkbox"
+            android:title="@string/pref_delay_time" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="庄家设置">
+        <EditTextPreference
+
+            android:hint="请输入庄家号，多个以英文逗号','隔开"
+            android:key="zhuangjia_list"
+            android:title="主人QQ" />
+        <EditTextPreference
+
+            android:hint="请输入管理的群号，多个以英文逗号','隔开"
+            android:key="qunhao_list"
+            android:title="管理指定群" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="auto_ti"
+            android:title="自动踢人" />
+        <EditTextPreference
+
+            android:hint="请输入摸包号，多个以英文逗号','隔开"
+            android:key="mobao_list"
+            android:dependency="auto_ti"
+            android:title="摸包名单" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="hb_ls"
+            android:title="红包流水及赔率设置" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:dependency="hb_ls"
+            android:key="hb_fb_ls"
+            android:title="发包流水统计" />
+        <SwitchPreference
+            android:defaultValue="false "
+            android:dependency="hb_ls"
+            android:key="hb_sy_ls"
+            android:title="输赢统计" />
+        <EditTextPreference
+
+
+            android:key="peilv"
+            android:dependency="hb_sy_ls"
+
+            android:title="赔率" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/about">
+        <com.example.jjhb.Gengxin_shuoming
+            android:positiveButtonText="谢谢，我知道了"
+            android:negativeButtonText=""
+            android:title="更新及使用说明" />
+        <Preference
+            android:key="author"
+            android:summary="JJ"
+            android:title="作者">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/veryyoung" />
+        </Preference>
+        <Preference
+            android:key="donate_alipay"
+            android:title="支付宝捐赠" />
+        <Preference
+            android:key="donate_wechat"
+            android:title="微信捐赠" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

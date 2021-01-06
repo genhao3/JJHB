@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更新说明:\n1.增加红包详情功能\n2.增加红包详情发送至群中\n3.增加指令查询流水功能\n4.修复私聊指令不能正确发送的bug\n5.增加摸包白名单功能(踢人还没实现)\n\n后期更新\n1.实现自动踢人功能\n2.增加赔率设置\n3.红包流水及输赢统计\n\n使用说明\n1.指令：玩家查流水及输赢指令：查\n                 庄家查输赢指令：查盈利\n                 群红包排行统计指令：排行榜\n以上指令直接在聊天窗口发送即可(包括群聊天窗口和私聊聊天窗口)\n2.摸包名单模块使用说明：不在名单内的将被踢出群，为空：允许所有人抢(不踢)，当然，也可以直接关闭踢人功能"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:textColor="#666666"
+        android:textSize="20sp"
+        />
+</LinearLayout>
